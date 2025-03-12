@@ -31,14 +31,14 @@ listContainer.addEventListener("click", function (e) {
         e.target.classList.toggle("checked");
         saveData();
     } else if (e.target.classList.contains("edit-button")) {
-        editTask(e.target.parentElement); // Call the edit function on the <li>
+        editTask(e.target.parentElement);
     } else if (e.target.tagName === "SPAN" && e.target !== e.target.parentElement.querySelector('.edit-button')) {
         e.target.parentElement.remove();
     }
 }, false);
 
 function editTask(taskElement) {
-    const currentText = taskElement.childNodes[0].nodeValue; // Get the current task text
+    const currentText = taskElement.childNodes[0].nodeValue; 
     const input = document.createElement("input");
     input.type = "text";
     input.value = currentText;
